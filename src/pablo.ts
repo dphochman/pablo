@@ -1,8 +1,6 @@
-// Sequ
-// get cards, shuffle deck
-// deal cards
+// Start: get cards, shuffle deck, deal cards
 // look at your front cards
-// take a turn: pick a card from deck ... play it, replace one of your cards and put it on discard.
+// take a turn: pick a card from discard, pick a card from deck ... play it, replace one of your cards and put it on discard.
 // ... play a card. 
 // ... ... 7,8: you may look at one of your cards. 
 // ... ... 9,10: you may look at another player's card. 
@@ -18,7 +16,7 @@ const shuffle = (cards: ICard[]) => {
     const rands = cards.map(card => Math.random());
     const deck = cards.sort((a, b) => rands[a.index] - rands[b.index]);
     return deck;
-}
+};
 
 let deck = shuffle(CARDS);
 // console.log(deck, deck.length);
